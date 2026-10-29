@@ -1,0 +1,11 @@
+package com.example.demo.repository;
+
+import com.example.demo.model.Comuna;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+
+import java.util.List;
+
+public interface ComunaRepository extends JpaRepository<Comuna, Integer> {
+    List<Comuna> findByRegionIdRegion(Integer idRegion);
+}
